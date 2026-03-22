@@ -51,18 +51,20 @@
   },
   {
     "id": "4",
-    "name": "Grace Nalubega",
-    "role": "Secretary",
-    "photo": "/images/members/placeholder.svg",
+    "name": "Christopher Sabiti",
+    "role": "Member",
+    "photo": "/images/members/member-1774178171760.png",
     "quote": "Documentation and transparency build trust.",
     "bio": "An experienced administrator with a passion for organizational excellence. Grace keeps the club's records in impeccable order.",
     "testimony": "The culture of trust and transparency at Kikalayi is what sets us apart. Every decision is documented, every member's voice is heard.",
     "story": "I believe that great organizations are built on strong foundations of governance. At Kikalayi, we practice what we preach.",
-    "joinDate": "2021-01-01",
+    "joinDate": "2026-01-01",
     "social": {
-      "linkedin": "https://linkedin.com",
-      "email": "secretary@kicalayiclub.com",
-      "phone": "+256700000004"
+      "linkedin": "https://www.linkedin.com/in/christophersabiti/",
+      "email": "sabiti.christopher@gmail.com",
+      "phone": "+256777293933",
+      "twitter": "https://twitter.com/sabiti14",
+      "website": "www.sabtechonline.com"
     }
   }
 ]
