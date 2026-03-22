@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { writeFile, mkdir } from "fs/promises";
-import { join } from "path";
+import { put } from "@vercel/blob";
 
 export async function POST(request: NextRequest) {
   const formData = await request.formData();
@@ -26,22 +25,16 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const bytes = await file.arrayBuffer();
-  const buffer = Buffer.from(bytes);
-
-  // Generate unique filename
   const ext = file.name.split(".").pop() || "jpg";
-  const filename = `member-${Date.now()}.${ext}`;
-  const uploadDir = join(process.cwd(), "public/images/members");
+  const filename = `kic-members/member-${Date.now()}.${ext}`;
 
-  // Ensure directory exists
-  await mkdir(uploadDir, { recursive: true });
-
-  const filepath = join(uploadDir, filename);
-  await writeFile(filepath, buffer);
+  const blob = await put(filename, file, {
+    access: "public",
+    contentType: file.type,
+  });
 
   return NextResponse.json({
-    url: `/images/members/${filename}`,
+    url: blob.url,
     filename,
   });
 }

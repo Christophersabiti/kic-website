@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
-import members from "@/data/members.json";
+import { getMembers } from "@/lib/members-store";
+
+export const dynamic = "force-dynamic";
 
 const values = [
   {
@@ -36,7 +38,8 @@ const objectives = [
   "Develop and improve profitable business ventures",
 ];
 
-export default function HomePage() {
+export default async function HomePage() {
+  const members = await getMembers();
   const leadership = members.filter((m) =>
     ["Chairman", "Vice-Chairman", "Treasurer", "Secretary"].includes(m.role)
   );
@@ -194,47 +197,49 @@ export default function HomePage() {
       </section>
 
       {/* Leadership Preview */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl font-bold text-navy-800">
-              Executive Committee
-            </h2>
-            <div className="w-20 h-1 bg-gold-400 mx-auto mt-4" />
-            <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-              Our elected leadership guides the club with integrity, ensuring
-              every decision aligns with our mission of collective prosperity.
-            </p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {leadership.map((m) => (
-              <div
-                key={m.id}
-                className="text-center bg-white rounded-2xl p-6 shadow-md"
-              >
-                <div className="w-20 h-20 mx-auto rounded-full bg-navy-100 overflow-hidden mb-4 relative">
-                  <Image
-                    src={m.photo}
-                    alt={m.name}
-                    fill
-                    className="object-cover"
-                  />
+      {leadership.length > 0 && (
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-14">
+              <h2 className="text-3xl font-bold text-navy-800">
+                Executive Committee
+              </h2>
+              <div className="w-20 h-1 bg-gold-400 mx-auto mt-4" />
+              <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+                Our elected leadership guides the club with integrity, ensuring
+                every decision aligns with our mission of collective prosperity.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {leadership.map((m) => (
+                <div
+                  key={m.id}
+                  className="text-center bg-white rounded-2xl p-6 shadow-md"
+                >
+                  <div className="w-20 h-20 mx-auto rounded-full bg-navy-100 overflow-hidden mb-4 relative">
+                    <Image
+                      src={m.photo}
+                      alt={m.name}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <h3 className="font-bold text-navy-800">{m.name}</h3>
+                  <p className="text-gold-500 text-sm font-medium">{m.role}</p>
                 </div>
-                <h3 className="font-bold text-navy-800">{m.name}</h3>
-                <p className="text-gold-500 text-sm font-medium">{m.role}</p>
-              </div>
-            ))}
+              ))}
+            </div>
+            <div className="text-center mt-10">
+              <Link
+                href="/members"
+                className="px-8 py-3 bg-navy-800 text-white font-semibold rounded-lg hover:bg-navy-700 transition-colors inline-block"
+              >
+                View All Members
+              </Link>
+            </div>
           </div>
-          <div className="text-center mt-10">
-            <Link
-              href="/members"
-              className="px-8 py-3 bg-navy-800 text-white font-semibold rounded-lg hover:bg-navy-700 transition-colors inline-block"
-            >
-              View All Members
-            </Link>
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* CTA */}
       <section className="py-20 bg-navy-800 text-white">

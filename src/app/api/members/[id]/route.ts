@@ -6,7 +6,7 @@ export async function GET(
   { params }: { params: Promise<{ id: string }> }
 ) {
   const { id } = await params;
-  const member = getMember(id);
+  const member = await getMember(id);
   if (!member) {
     return NextResponse.json({ error: "Not found" }, { status: 404 });
   }
@@ -19,7 +19,7 @@ export async function PUT(
 ) {
   const { id } = await params;
   const body = await request.json();
-  const member = updateMember(id, body);
+  const member = await updateMember(id, body);
   if (!member) {
     return NextResponse.json({ error: "Not found" }, { status: 404 });
   }
@@ -31,7 +31,7 @@ export async function DELETE(
   { params }: { params: Promise<{ id: string }> }
 ) {
   const { id } = await params;
-  const success = deleteMember(id);
+  const success = await deleteMember(id);
   if (!success) {
     return NextResponse.json({ error: "Not found" }, { status: 404 });
   }
