@@ -1,0 +1,68 @@
+[
+  {
+    "id": "1",
+    "name": "John Mukasa",
+    "role": "Chairman",
+    "photo": "/images/members/placeholder.svg",
+    "quote": "Together we build lasting wealth.",
+    "bio": "A visionary leader with over 15 years of experience in finance and investment. John founded Kikalayi Investment Club with the dream of creating generational wealth for its members.",
+    "testimony": "Joining and leading this club has been the most rewarding experience of my career. We have seen members transform their financial futures through disciplined saving and strategic investments.",
+    "story": "Growing up in Kampala, I witnessed firsthand how collective saving could transform communities. This inspired me to bring together like-minded individuals to form Kikalayi Investment Club.",
+    "joinDate": "2021-01-01",
+    "social": {
+      "linkedin": "https://linkedin.com",
+      "twitter": "https://twitter.com",
+      "email": "chairman@kicalayiclub.com",
+      "phone": "+256700000001"
+    }
+  },
+  {
+    "id": "2",
+    "name": "Sarah Nakamya",
+    "role": "Vice-Chairman",
+    "photo": "/images/members/placeholder.svg",
+    "quote": "Discipline in saving today secures our tomorrow.",
+    "bio": "An accomplished business strategist and entrepreneur. Sarah brings strategic vision and operational excellence to the club's leadership.",
+    "testimony": "Being part of Kikalayi has taught me that true wealth is built collectively. The support system and shared knowledge among members is invaluable.",
+    "story": "My journey in investment started small, but the collective power of our club has enabled us to pursue opportunities none of us could have accessed alone.",
+    "joinDate": "2021-01-01",
+    "social": {
+      "linkedin": "https://linkedin.com",
+      "twitter": "https://twitter.com",
+      "email": "vice@kicalayiclub.com",
+      "phone": "+256700000002"
+    }
+  },
+  {
+    "id": "3",
+    "name": "David Ssemakula",
+    "role": "Treasurer",
+    "photo": "/images/members/placeholder.svg",
+    "quote": "Every shilling saved is a step toward financial freedom.",
+    "bio": "A certified accountant with expertise in financial management. David ensures the club's finances are managed with transparency and integrity.",
+    "testimony": "Managing the club's funds has been a privilege. Watching our portfolio grow through careful stewardship gives me immense pride.",
+    "story": "With a background in banking and accounting, I understood the power of compound growth. Kikalayi gives every member access to professional financial management.",
+    "joinDate": "2021-01-01",
+    "social": {
+      "linkedin": "https://linkedin.com",
+      "email": "treasurer@kicalayiclub.com",
+      "phone": "+256700000003"
+    }
+  },
+  {
+    "id": "4",
+    "name": "Grace Nalubega",
+    "role": "Secretary",
+    "photo": "/images/members/placeholder.svg",
+    "quote": "Documentation and transparency build trust.",
+    "bio": "An experienced administrator with a passion for organizational excellence. Grace keeps the club's records in impeccable order.",
+    "testimony": "The culture of trust and transparency at Kikalayi is what sets us apart. Every decision is documented, every member's voice is heard.",
+    "story": "I believe that great organizations are built on strong foundations of governance. At Kikalayi, we practice what we preach.",
+    "joinDate": "2021-01-01",
+    "social": {
+      "linkedin": "https://linkedin.com",
+      "email": "secretary@kicalayiclub.com",
+      "phone": "+256700000004"
+    }
+  }
+]
